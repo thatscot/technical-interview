@@ -1,0 +1,61 @@
+.App {
+  padding: 1%;
+}
+
+.content-container {
+  display: flex;
+}
+
+.heading {
+  color: #439889;
+}
+
+button {
+  border-radius: 20px;
+  border-color: #439889;
+  background-color: #439889;
+  border-width: 0;
+  color: white;
+  height: 35px;
+  width: 90px;
+}
+
+.posts {
+  background-color: whitesmoke;
+  padding-inline-end: 40px;
+  padding-top: 1%;
+}
+
+.post-container {
+  padding-left: 1%;
+  max-width: 50%;
+}
+
+.post-title {
+  padding-right: 2%;
+  cursor: pointer;
+}
+
+.post-card {
+  border-bottom: 0.5px #439889 solid;
+  display: flex;
+}
+
+.load-posts {
+  margin-left: 1%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.show-post {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header {
+  display: flex;
+}
+
+Button {
+  font-weight: bold;
+}

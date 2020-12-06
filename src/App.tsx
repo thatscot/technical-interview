@@ -16,35 +16,21 @@ function App(props: any) {
   };
 
   const getPosts = async (): Promise<any> => {
-    let result;
-
     try {
-      result = await fetch("https://jsonplaceholder.typicode.com/posts");
+      return parseResponse(
+        await fetch("https://jsonplaceholder.typicode.com/posts")
+      );
     } catch (error) {
-      return null;
-    }
-
-    if (result) {
-      return parseResponse(result);
-    } else {
       return null;
     }
   };
 
   const getPost = async (postId: number): Promise<any> => {
-    let result;
-
     try {
-      result = await fetch(
-        "https://jsonplaceholder.typicode.com/posts/" + postId
+      parseResponse(
+        await fetch("https://jsonplaceholder.typicode.com/posts/" + postId)
       );
     } catch (error) {
-      return null;
-    }
-
-    if (result) {
-      return parseResponse(result);
-    } else {
       return null;
     }
   };
@@ -100,9 +86,7 @@ function App(props: any) {
                         <h2 className="post-title">{post.title}</h2>
                         <button
                           className="show-post"
-                          onClick={() => {
-                            handleViewClick(post.id);
-                          }}
+                          onClick={() => handleViewClick(post.id)}
                         >
                           View
                         </button>
